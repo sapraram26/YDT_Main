@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <title>YouTube Control</title>
+  </head>
+  <body>
+    <h1>Select a Topic</h1>
+    <input type="text" id="topic" placeholder="Enter a topic" />
+    <button id="save">Save</button>
+    <div id="container">
+      <div id="header">
+        <h2>YouTube Control</h2>
+        <div id="toggle">
+          <input type="checkbox" id="yt_on" />
+          <label for="yt_on">On/Off</label>
+        </div>
+      </div>
+      <div id="options">
+        <ul>
+          <li>
+            <input type="checkbox" id="hide_comments" class="yt-setting" />
+            <label for="hide_comments">Hide Comments</label>
+          </li>
+          <li>
+            <input type="checkbox" id="hide_sidebar" class="yt-setting" />
+            <label for="hide_sidebar">Hide Sidebar</label>
+          </li>
+          <li>
+            <input type="checkbox" id="hide_shorts" class="yt-setting" />
+            <label for="hide_shorts">Hide Shorts</label>
+          </li>
+        </ul>
+      </div>
+      <!-- <div id="off">Turn Off</div> -->
+    </div>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
