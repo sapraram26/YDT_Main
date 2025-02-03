@@ -1,0 +1,8 @@
+Work done till date:
+  Hide -> Shorts, Comments, Sidebar
+  Main Features -> Detoxify home page
+
+Future plans:
+  Add new Features
+  Enhance main features
+    Add playlist tracker for tutorials
