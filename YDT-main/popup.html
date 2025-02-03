@@ -3,38 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="./css/popup.css">
     <title>YouTube Control</title>
   </head>
-  <body>
-    <h1>Select a Topic</h1>
-    <input type="text" id="topic" placeholder="Enter a topic" />
-    <button id="save">Save</button>
-    <div id="container">
-      <div id="header">
-        <h2>YouTube Control</h2>
-        <div id="toggle">
-          <input type="checkbox" id="yt_on" />
-          <label for="yt_on">On/Off</label>
+  <body class="bg-gradient-to-br from-gray-900 to-gray-700 text-gray-100 p-6 font-sans flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-sm bg-gray-800 shadow-lg rounded-lg p-6">
+      <h1 class="text-xl font-bold text-center text-white">Select a Topic</h1>
+      <div class="flex flex-col items-center mt-4">
+        <input 
+          type="text" 
+          id="topic" 
+          placeholder="Enter a topic" 
+          autocomplete="off" 
+          class="w-full p-3 border border-gray-600 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400" 
+        />
+        <button 
+          id="save" 
+          class="mt-3 w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+        >Save</button>
+      </div>
+      <div id="container" class="mt-6 p-5 bg-gray-900 shadow-md rounded-md flex flex-col items-center">
+        <div id="header" class="w-full text-center">
+          <h2 class="text-lg font-semibold text-white">YouTube Control</h2>
+          <div id="toggle" class="mt-4">
+            <input type="checkbox" id="yt_on" class="hidden" />
+            <label for="yt_on" class="cursor-pointer flex items-center space-x-3">
+              <span class="w-12 h-6 bg-gray-600 rounded-full flex items-center px-1 transition-all duration-300">
+                <span class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform"></span>
+              </span>
+              <span class="text-sm">On/Off</span>
+            </label>
+          </div>
+        </div>
+        <div id="options" class="w-full mt-6">
+          <ul class="list-none p-0 space-y-4">
+            <li class="flex items-center space-x-3">
+              <input type="checkbox" id="hide_comments" class="yt-setting w-5 h-5 accent-blue-500" />
+              <label for="hide_comments" class="text-sm">Hide Comments</label>
+            </li>
+            <li class="flex items-center space-x-3">
+              <input type="checkbox" id="hide_sidebar" class="yt-setting w-5 h-5 accent-blue-500" />
+              <label for="hide_sidebar" class="text-sm">Hide Sidebar</label>
+            </li>
+            <li class="flex items-center space-x-3">
+              <input type="checkbox" id="hide_shorts" class="yt-setting w-5 h-5 accent-blue-500" />
+              <label for="hide_shorts" class="text-sm">Hide Shorts</label>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="options">
-        <ul>
-          <li>
-            <input type="checkbox" id="hide_comments" class="yt-setting" />
-            <label for="hide_comments">Hide Comments</label>
-          </li>
-          <li>
-            <input type="checkbox" id="hide_sidebar" class="yt-setting" />
-            <label for="hide_sidebar">Hide Sidebar</label>
-          </li>
-          <li>
-            <input type="checkbox" id="hide_shorts" class="yt-setting" />
-            <label for="hide_shorts">Hide Shorts</label>
-          </li>
-        </ul>
-      </div>
-      <!-- <div id="off">Turn Off</div> -->
     </div>
     <script src="js/popup.js"></script>
   </body>
